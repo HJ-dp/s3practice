@@ -8,10 +8,10 @@ import { css } from "@emotion/react";
 function IconButton({ iconKey }) {
   const iconMap = {
     Notion: [
-      "src/assets/icon/notion.png",
+      "/assets/icon/notion.png",
       "https://dynamic-cosmonaut-59e.notion.site/f744ddba8b744caeaa0465174af1f279?pvs=4",
     ],
-    Github: ["src/assets/icon/github.png", "https://github.com/HJ-dp"],
+    Github: ["/assets/icon/github.png", "https://github.com/HJ-dp"],
     React: [
       "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
       "",

@@ -10,7 +10,7 @@ function PreviewPage() {
   return (
     <Container h={layoutHeight}>
       <Box color="purple" name="image">
-        <ImgBox src="src/assets/hojinlee.jpg" alt="hojin" />
+        <ImgBox src="/assets/hojinlee.jpg" alt="hojin" />
         <br />
         <TitleP>이호진</TitleP>
         <br />
