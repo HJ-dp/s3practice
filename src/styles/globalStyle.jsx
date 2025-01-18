@@ -1,7 +1,31 @@
 import { css } from "@emotion/react";
 
+export const globalFont = css`
+  @font-face {
+    font-family: "Pretendard-Light";
+    src: url("/fonts/Pretendard-Light.woff2") format("woff2");
+    font-weight: 100;
+    font-style: Light;
+  }
+
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Pretendard-Bold";
+    src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: Bold;
+  }
+`;
+
 export const globalCss = css`
   body {
+    /* background-color: #a7e0c8; */
     & * {
       box-sizing: border-box;
     }
@@ -47,16 +71,6 @@ export const globalCss = css`
   figcaption {
     margin: 0;
     padding: 0;
-  }
-`;
-
-export const globalFont = css`
-  @font-face {
-    font-family: "Pretendard-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2")
-      format("woff2");
-    font-weight: 400;
-    font-style: normal;
   }
 `;
 
