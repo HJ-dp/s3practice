@@ -46,7 +46,7 @@ const SplineBox = styled.div`
 
 const ButtonToDownload = styled.a`
   position: absolute;
-  top: 85%;
+  bottom: 8%;
   background-color: transparent;
   padding: 1.5rem;
   border-radius: 2rem;
