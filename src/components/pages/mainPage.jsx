@@ -1,13 +1,57 @@
+/** @jsxImportSource @emotion/react */
+import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { PageURL } from "../../router/pageURL";
+import { useOutletContext } from "react-router-dom";
 
-function mainPage() {
+function MainPage() {
+  const { layoutHeight } = useOutletContext();
   return (
-    <div>
-      <div>main</div>
-      <Link to={PageURL.Error404}>버튼</Link>
-    </div>
+    <Container h={layoutHeight}>
+      <SplineBox>
+        <spline-viewer url="https://prod.spline.design/cMp5lhzQNESducgn/scene.splinecode"></spline-viewer>
+      </SplineBox>
+      <ButtonToDownload
+        href="https://file.notion.so/f/f/aa2a3bfb-28da-459b-8276-8dd35b3ebcb8/f54c63c8-67fa-465e-81a6-238149312e87/Hojin_Lee_resume.pdf?table=block&id=18539da0-14f7-80ea-8687-f12cf81695a8&spaceId=aa2a3bfb-28da-459b-8276-8dd35b3ebcb8&expirationTimestamp=1738339200000&signature=xz5YOcPAcfeLcw2t57z0WdjbltHAyZv97rjiI-6pbMg&downloadName=Hojin_Lee_resume.pdf"
+        download={"resume_hojinlee"}
+        target="_blank"
+        role="button"
+      >
+        Download Resume
+      </ButtonToDownload>
+    </Container>
   );
 }
 
-export default mainPage;
+export default MainPage;
+
+const Container = styled.article`
+  position: relative;
+  width: 100%;
+  min-height: ${({ h }) => `calc(100vh - ${h}px)`};
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  @media (min-width: 481px) and (max-width: 1023px) {
+  }
+  @media (max-width: 480px) {
+  }
+`;
+const SplineBox = styled.div`
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const ButtonToDownload = styled.a`
+  position: absolute;
+  top: 85%;
+  background-color: transparent;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  border: 1px black solid;
+  color: black;
+`;

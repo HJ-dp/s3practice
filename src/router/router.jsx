@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { PageURL } from "./pageURL";
 
 // 페이지
+import MainPage from "../components/pages/mainPage";
 import ErrorPage from "../components/pages/errorPage";
 import PreviewPage from "../components/pages/previewPage";
 
@@ -12,7 +13,8 @@ function Router() {
   return (
     <Routes>
       <Route element={<DefaultLayout />}>
-        <Route path={PageURL.Main} element={<PreviewPage />}></Route>
+        <Route path={PageURL.Main} element={<MainPage />}></Route>
+        <Route path={PageURL.Preview} element={<PreviewPage />}></Route>
         <Route path={PageURL.Error404} element={<ErrorPage />}></Route>
       </Route>
     </Routes>
