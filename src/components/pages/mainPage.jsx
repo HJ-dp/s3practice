@@ -9,8 +9,6 @@ function MainPage() {
   return (
     <Container h={layoutHeight}>
       <spline-viewer url="https://prod.spline.design/gPap5rmtqg8zbOYg/scene.splinecode"></spline-viewer>
-      {/* 내 사진 */}
-      {/* <spline-viewer url="https://prod.spline.design/cMp5lhzQNESducgn/scene.splinecode"></spline-viewer> */}
       <ButtonToDownload href="/assets/Hojin_Lee_resume.pdf" target="_blank">
         Download Resume
       </ButtonToDownload>
@@ -26,9 +24,10 @@ const Container = styled.article`
   min-height: ${({ h }) => `calc(100vh - ${h}px)`};
   display: grid;
   overflow: hidden;
-  * > {
-    height: 100%;
+  & > :first-child {
+    height: 110vh;
   }
+
   @media (min-width: 481px) and (max-width: 1023px) {
   }
   @media (max-width: 480px) {
