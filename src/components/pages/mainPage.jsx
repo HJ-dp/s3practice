@@ -1,7 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
-import { PageURL } from "../../router/pageURL";
 import { useOutletContext } from "react-router-dom";
 
 function MainPage() {

@@ -25,7 +25,7 @@ export const globalFont = css`
 
 export const globalCss = css`
   body {
-    /* background-color: #a7e0c8; */
+    background-color: #000000;
     & * {
       box-sizing: border-box;
     }
